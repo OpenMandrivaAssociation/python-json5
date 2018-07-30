@@ -63,7 +63,7 @@ SLOW. It can be 1000-6000x slower than the C-optimized JSON module, and
 is 200x slower (or more) than the pure Python JSON module.
 
 %prep
-%autosetup -p1 -n pyjson5-%{version}
+%setup -q -n pyjson5-%{version}
 mkdir py2 py3
 cp -a `ls -1 |grep -vE 'py[23]'` py2/
 mv `ls -1 |grep -vE 'py[23]'` py3/
