@@ -1,5 +1,5 @@
 Name:		python-json5
-Version:	0.6.1
+Version:	0.8.4
 Release:	2
 Summary:	A Python implementation of the JSON5 data format
 Group:		Development/Python
@@ -80,8 +80,12 @@ python2 setup.py install --skip-build --root %{buildroot}
 cd ../py3
 python setup.py install --skip-build --root %{buildroot}
 
-rm %{buildroot}%{python_sitelib}/*.rst
-rm %{buildroot}%{python2_sitelib}/*.rst
+rm -fv %{buildroot}%{python_sitelib}/*.rst
+rm -fv %{buildroot}%{python2_sitelib}/*.rst
+rm -f %{buildroot}%{python_sitelib}/README.md
+rm -f %{buildroot}%{python2_sitelib}/README.md
+rm -rf %{buildroot}%{python2_sitelib}/tests
+rm -rf %{buildroot}%{python_sitelib}/tests
 
 
 %files
