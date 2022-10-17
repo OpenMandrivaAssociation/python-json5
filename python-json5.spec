@@ -1,5 +1,5 @@
 Name:		python-json5
-Version:	0.9.6
+Version:	0.9.10
 Release:	1
 Summary:	A Python implementation of the JSON5 data format
 Group:		Development/Python
