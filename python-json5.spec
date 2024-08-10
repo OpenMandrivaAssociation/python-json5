@@ -39,10 +39,10 @@ is 200x slower (or more) than the pure Python JSON module.
 %autosetup -p1 -n pyjson5-%{version}
 
 %build
-python setup.py build
+%py_build
 
 %install
-python setup.py install --skip-build --root %{buildroot}
+%py_install
 
 %files
 %{_bindir}/pyjson5
