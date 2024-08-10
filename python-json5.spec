@@ -10,6 +10,8 @@ BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python-setuptools
 BuildRequires:	python-pkg-resources
+BuildRequires:  python-pip
+BuildRequires:  python-wheel
 
 %description
 A Python implementation of the JSON5 data format.
