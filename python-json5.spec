@@ -47,4 +47,4 @@ is 200x slower (or more) than the pure Python JSON module.
 %files
 %{_bindir}/pyjson5
 %{python_sitelib}/json5
-%{python_sitelib}/*.egg-info
+#{python_sitelib}/*.egg-info
