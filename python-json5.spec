@@ -1,17 +1,20 @@
+%define module json5
+
 Name:		python-json5
-Version:	0.10.0
-Release:	2
+Version:	0.13.0
+Release:	1
 Summary:	A Python implementation of the JSON5 data format
 Group:		Development/Python
 License:	Apache 2.0
 URL:		https://github.com/dpranke/pyjson5
-Source0:	https://github.com/dpranke/pyjson5/archive/v%{version}.tar.gz
+Source0:	https://github.com/dpranke/pyjson5/archive/v%{version}/%{name}-%{version}.tar.gz
+
+BuildSystem:	python
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
-BuildRequires:	python-setuptools
-BuildRequires:	python-pkg-resources
-BuildRequires:  python-pip
-BuildRequires:  python-wheel
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 A Python implementation of the JSON5 data format.
@@ -35,16 +38,7 @@ This is an early release. It has been reasonably well-tested, but it is
 SLOW. It can be 1000-6000x slower than the C-optimized JSON module, and
 is 200x slower (or more) than the pure Python JSON module.
 
-%prep
-%autosetup -p1 -n pyjson5-%{version}
-
-%build
-%py_build
-
-%install
-%py_install
-
 %files
-%{_bindir}/pyjson5
-%{python_sitelib}/json5
-%{python_sitelib}/json5-%{version}.dist-info
+%{_bindir}/py%{module}
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}.dist-info
