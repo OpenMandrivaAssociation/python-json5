@@ -1,7 +1,7 @@
 %define module json5
 
 Name:		python-json5
-Version:	0.13.0
+Version:	0.14.0
 Release:	1
 Summary:	A Python implementation of the JSON5 data format
 Group:		Development/Python
