@@ -2,7 +2,7 @@
 
 Name:		python-json5
 Version:	0.15.0
-Release:	1
+Release:	2
 Summary:	A Python implementation of the JSON5 data format
 Group:		Development/Python
 License:	Apache 2.0
